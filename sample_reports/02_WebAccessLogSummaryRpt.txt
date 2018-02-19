@@ -1,0 +1,299 @@
+=====================================================
+===== Http Access log analysis report =====
+===== based on access logs dated: 2017-11-03  =====
+=====================================================
+
+===== Summary table contains short heading title. See below for their description =====
+Note: Hourly statistics excludes the following static contents from calculation:
+excludes with these extensions: 
+hr   	: Hour                                                                
+date 	: Date                                                                
+time 	: Time                                                                
+uid  	: User ID                                                             
+js   	: jSession                                                            
+was  	: WebSphere Application Server or App Server                          
+ws   	: Web Server like Apache or IBM HTTP Server (IHS)                     
+jvm  	: Java Virtual Machine (JVM)                                          
+req  	: HTTP Request like GET, POST etc.                                    
+rsp  	: HTTP Response code like 200, 400 etc.                               
+sz   	: Size - HTTP response size                                           
+uuc  	: Unique User Count                                                   
+uupc 	: Unique User Count in Percentage                                     
+usc  	: Unique jSession Count                                               
+uspc 	: Unique jSession Count in Percentage                                 
+art  	: Average Response Time in Second                                     
+bart 	: Baseline Average Response Time in Second                            
+rt   	: (HTTP) Response Time in Second                                      
+mnrt 	: Minimum Response Time in Second for the given access request or transaction
+mxrt 	: Maximum Response Time in Second for the given access request or Transaction
+rng  	: Response Range (second). What range like 1 second, 5 second etc. range the response falls.
+<=1  	: Less than or eaual to One Second response range in percentage       
+<=5  	: Greater than One Second and less than or equal to Five Seconds response range in percentage
+<=10 	: Greater than Five Seconds and less than or equal to Ten Seconds response range in percentage
+<=20 	: Greater than Ten seconds and less than or equal to Twenty Seconds response range in percentage
+>20  	: More than Twenty Seconds in Percentage                              
+xrc  	: Total Record (Request,Response or Transaction) Count - that excludes static contents like jpg|gif|png|ico|js|cgi|css|htm|html|pdf|null|doc|xlsx|xsl|aspx|txt|.css.xhtml|.js.xhtml|.png.xhtml|.gif.xhtml|Robohelp. 
+xrpc 	: Total Record (Request,Response or Transaction) Count in Percentage - that excludes static contents like jpg|gif|png|ico|js|cgi|css|htm|html|pdf|null|doc|xlsx|xsl|aspx|txt|.css.xhtml|.js.xhtml|.png.xhtml|.gif.xhtml|Robohelp. 
+irc  	: Total Record (Request,Response or Transaction) Count - that includes static contents. 
+irpc 	: Total Record (Request,Response or Transaction) Count in Percentage - that includes static contents. 
+cnt  	: (Any) Count like jSession count, User count etc.                    
+pc   	: (Any) Count or measure represented in Percentage                    
+srv  	: Server - like Web Server(IHS), App Server etc.                      
+url  	: URL                                                                 
+bwsr 	: Browser                                                             
+=====================================================
+Number of discarded records : 299
+
+
+=====================================================
+===== Hourly Statistics =====
+Note: Hourly statistics excludes the following static contents from calculation:
+excludes with these extensions: jpg|gif|png|ico|js|cgi|css|htm|html|pdf|null|doc|xlsx|xsl|aspx|txt|.css.xhtml|.js.xhtml|.png.xhtml|.gif.xhtml|Robohelp
+=====================================================
+
+hr 	  uuc	  usc	    art	    <=1	    <=5	   <=10	   <=20	    >20	     xrc	     irc
+6  	    2	    2	  2.113	 50.617	 38.272	  9.877	  1.235	  0.000	      81	      83
+7  	   32	   41	  1.028	 75.463	 21.385	  2.605	  0.274	  0.274	    1459	    2897
+8  	  306	  372	  0.868	 80.789	 16.503	  1.754	  0.745	  0.210	   16652	   29270
+9  	  440	  588	  0.944	 77.937	 19.601	  1.571	  0.728	  0.164	   45202	   61826
+10 	  445	  666	  1.017	 77.535	 19.791	  1.709	  0.740	  0.226	   40676	   52150
+11 	  451	  684	  0.897	 78.676	 18.827	  1.589	  0.701	  0.206	   44669	   54239
+12 	  325	  474	  0.824	 81.064	 16.875	  1.334	  0.595	  0.133	   27894	   34068
+13 	  347	  579	  0.838	 79.855	 17.699	  1.548	  0.731	  0.168	   29143	   39578
+14 	  397	  609	  0.825	 80.270	 17.137	  1.688	  0.783	  0.122	   42772	   51237
+15 	  394	  587	  0.875	 80.483	 17.238	  1.485	  0.671	  0.124	   39657	   46337
+16 	  270	  339	  0.790	 80.982	 16.700	  1.377	  0.771	  0.171	   16994	   19277
+17 	   26	   32	  1.045	 76.864	 17.909	  3.484	  1.463	  0.279	    1435	    1548
+18 	    7	    8	  1.283	 67.892	 23.775	  7.598	  0.735	  0.000	     408	     517
+19 	    1	    3	  5.836	 61.290	 33.333	  1.075	  0.000	  4.301	      93	     218
+20 	    2	    5	  2.485	 84.146	  6.707	  0.305	  8.232	  0.610	     328	     708
+21 	    2	    3	  1.875	 85.667	  2.000	  0.333	 12.000	  0.000	     300	     461
+22 	    1	    2	  0.294	 90.000	 10.000	  0.000	  0.000	  0.000	      10	      59
+
+
+=====================================================
+===== Overall-Daily Statistics =====
+Note: Overall response range and average response time excludes the following static contents from calculation:
+excludes with these extensions: jpg|gif|png|ico|js|cgi|css|htm|html|pdf|null|doc|xlsx|xsl|aspx|txt|.css.xhtml|.js.xhtml|.png.xhtml|.gif.xhtml|Robohelp
+=====================================================
+
+date      	  uuc	  usc	    art	    <=1	    <=5	   <=10	   <=20	    >20	     xrc	     irc
+2017-11-03	  709	 2457	  0.894	 79.403	 18.096	  1.594	  0.738	  0.170	  307773	  394473
+
+
+=====================================================
+===== Statistics by Web Server(IHS)  and WebSphere App Server (WAS) =====
+=====================================================
+
+srv                             uuc	  jsc	    art	    <=1	    <=5	   <=10	   <=20	    >20	   xrpc	   irpc
+webhost010                  	  244	  593	  0.878	 79.283	 17.873	  1.630	  1.051	  0.162	 25.031	 24.602
+webhost020                  	  243	  733	  0.889	 80.179	 17.564	  1.450	  0.612	  0.195	 27.021	 26.799
+webhost030                  	  254	  711	  1.019	 77.590	 19.968	  1.527	  0.677	  0.237	 23.129	 23.512
+webhost040                  	  255	  700	  0.797	 80.368	 17.155	  1.775	  0.614	  0.088	 24.819	 25.087
+
+AppSrv01:23532em3r              	  271	  553	  0.870	 79.389	 18.381	  1.335	  0.759	  0.136	 25.815	 25.080
+AppSrv02:23532enb4        	   			50	  109	  0.167	 99.281	  0.605	  0.038	  0.038	  0.038	  1.718	  1.517
+AppSrv03:23532es5b        	   			40	   88	  0.199	 98.277	  1.518	  0.123	  0.000	  0.082	  0.792	  0.702
+AppSrv04:23532etq9              	  35	   47	  0.046	100.000	  0.000	  0.000	  0.000	  0.000	  0.029	  0.035
+AppSrv05:678494cmb              	  257	  538	  0.883	 79.069	 18.446	  1.574	  0.798	  0.113	 26.922	 26.425
+AppSrv06:678494f7d              	  255	  507	  0.857	 78.768	 18.796	  1.740	  0.568	  0.128	 19.798	 19.891
+....
+....
+
+
+=====================================================
+===== Statistics by HTTP response code =====
+=====================================================
+
+rsp	        cnt	     pc
+200	     352004	 89.234
+206	          7	  0.002
+302	      20121	  5.101
+304	      14050	  3.562
+401	          1	  0.000
+403	       7764	  1.968
+404	        501	  0.127
+500	         25	  0.006
+Total response count: 394473
+
+
+=====================================================
+===== Top 10 (slowest) responses by Response Time =====
+=====================================================
+
+ws             	date        	time    	js                            	was         req   	rsp	       rt	  rng	      sz	uid                           	    url                                                           bwsr                               
+webhost053 	03/Nov/2017 	15:26:21	Tf1SZekmacaDRNfGdCoWv1V       	AppSrv03       	POST  	200	 1337.390	  >20	    7796	abc.Gilwarden@logparserorg.com    	/evtMgmt/pages/evtCreate.xhtml                               	Firefox/48.0                       
+webhost053 	03/Nov/2017 	15:20:12	Tf1SZekmacaDRNfGdCoWv1V       	AppSrv03       	POST  	200	 1318.970	  >20	    7796	abc.Gilwarden@logparserorg.com    	/evtMgmt/pages/evtCreate.xhtml                               	Firefox/48.0                       
+webhost056 	03/Nov/2017 	10:50:21	5AWea7KQ28fcUGAFP8LfF3A       	AppSrv04       	POST  	200	 1201.010	  >20	     412	def.Twang@logparserorg.com      		/rptMgmt/preparerptAction.do                               		Firefox/42.0                       
+webhost056 	03/Nov/2017 	10:56:33	5AWea7KQ28fcUGAFP8LfF3A       	AppSrv04       	POST  	200	 1200.940	  >20	     412	def.Twang@logparserorg.com      		/rptMgmt/preparerptAction.do                               		Firefox/42.0                       
+webhost056 	03/Nov/2017 	09:58:33	FfJIxN5_6W348ANe0OavEIq       	AppSrv03       	POST  	200	 1200.590	  >20	     412	lpt.Lamndo@logparserorg.com       	/rptMgmt/preparerptAction.do                               		Firefox/55.0                       
+webhost056 	03/Nov/2017 	12:23:52	zSwA57xMjTJgNkvbhHm1Xev       	AppSrv01       	POST  	200	  380.784	  >20	    1029	xyz.Farker@logparserorg.com    			/salesMgmt/salesMgmtReCount.do                                MSIE/11.0;Trident/7.0              
+webhost056 	03/Nov/2017 	12:23:22	zSwA57xMjTJgNkvbhHm1Xev       	AppSrv01       	POST  	200	  380.651	  >20	    1029	xyz.Farker@logparserorg.com    			/salesMgmt/salesMgmtReCount.do                                MSIE/11.0;Trident/7.0              
+webhost056 	03/Nov/2017 	12:24:48	zSwA57xMjTJgNkvbhHm1Xev       	AppSrv01       	POST  	200	  357.597	  >20	    1029	xyz.Farker@logparserorg.com    			/salesMgmt/salesMgmtReCount.do                                MSIE/11.0;Trident/7.0              
+webhost056 	03/Nov/2017 	12:22:16	zSwA57xMjTJgNkvbhHm1Xev       	AppSrv01       	POST  	200	  333.625	  >20	    1029	xyz.Farker@logparserorg.com    			/salesMgmt/salesMgmtReCount.do                                MSIE/11.0;Trident/7.0              
+webhost056 	03/Nov/2017 	12:26:03	zSwA57xMjTJgNkvbhHm1Xev       	AppSrv01       	POST  	200	  322.874	  >20	    1029	xyz.Farker@logparserorg.com    			/salesMgmt/salesMgmtReCount.do                                MSIE/11.0;Trident/7.0              
+
+=====================================================
+===== Top 10 (by count) URL ending with HTTP response code 400 and higher =====
+===== for detail review file: /tmp/2017-11-03/WebAccessLogSummaryByRC400PlusURLRpt.csv =====
+=====================================================
+
+rsp	       cnt	url                                                                                            
+403	      5449	/salesMgmt/GetRelatedClientList                                                             
+403	      2295	/docMgmt/pages/MovedocView.xhtml                                                              
+404	       163	/salesMgmt/global/css/null                                                                  
+404	       106	/custWarn/pages/Createcustwarn.xhtm                                                                                              
+404	        80	/custIdx/global/css/null                                                              
+404	        64	/images/h1title_1px_background.gif                                                             
+404	        41	/global/images/spacer.gif                                                                      
+500	        22	/phix/faces/dashBoardScreen.xhtml                                                                    
+408	        19	/custWarn/pages/Viewcustwarn.xhtml.xwar                                                                                               
+403	        18	/docMgmt/pages/MovedocView.xhtml                                                     
+
+
+=====================================================
+===== Summary by Domain - Top 5 (slowest) by average response time =====
+===== for detail review file: /tmp/2017-11-03/WebAccessLogSummaryByDomainRpt.csv =====
+Note: Domain response range and average response time excludes the following static contents from calculation:
+excludes with these extensions: jpg|gif|png|ico|js|cgi|css|htm|html|pdf|null|doc|xlsx|xsl|aspx|txt|.css.xhtml|.js.xhtml|.png.xhtml|.gif.xhtml|Robohelp
+=====================================================
+
+name                	    art	     xrc
+RefLinksAdmin       	  5.759	       2
+rptMgmt     	  				4.433	    5294
+phix                	  2.955	    4488
+OrganizationWeb     	  2.327	      49
+salesMgmt        	  		1.351	   82908
+
+
+=====================================================
+===== Top 5 (slowest) UIDs by Average Response Time =====
+===== for detail review file: /tmp/2017-11-03/WebAccessLogSummaryByUIDRpt.csv =====
+=====================================================
+
+uid                                     	    <=1	    <=5	   <=10	   <=20	    >20	      		xrc	    art
+abc.Gilwarden@logparserorg.com              	 86.538	 10.577	  0.962	  0.000	  1.923	      104	 26.099
+def.Freaking@logparserorg.com                  66.667	 25.000	  0.000	  0.000	  8.333	       12	 19.718
+xyz.Diming@logparserorg.com               	 	 60.870	  6.522	  0.000	  0.000	 32.609	       46	 11.153
+def.Twang@logparserorg.com                	 	 90.807	  4.709	  2.466	  0.000	  2.018	      446	  8.617
+Dwan.Niglet@logparserorg.com         	 				 73.016	 14.286	  4.762	  1.587	  6.349	       63	  5.061
+
+
+=====================================================
+===== Summary by Extension =====
+=====================================================
+
+Ext                                	    <=1	    <=5	   <=10	   <=20	    >20	      cnt	    art
+LabelsServlet                      	  0.000	 97.368	  0.000	  2.632	  0.000	       38	  2.561
+do                                 	 25.661	 68.894	  4.205	  0.584	  0.657	    52083	  2.389
+xwar                               	 57.599	 39.411	  0.718	  2.111	  0.161	     6823	  1.484
+faces                              	 80.483	 14.067	  2.894	  2.517	  0.039	    61536	  1.190
+xhtml                              	 76.967	 20.216	  1.833	  0.608	  0.375	    35506	  1.020
+BinaryOutputServlet                	 80.435	 19.565	  0.000	  0.000	  0.000	       46	  0.998
+pdf                                	 66.667	 33.333	  0.000	  0.000	  0.000	        3	  0.860
+autoCompleteWeb                    	 92.585	  4.879	  2.006	  0.477	  0.054	     9224	  0.535
+FrameworkSimpleAjaxServlet         	 98.472	  1.513	  0.016	  0.000	  0.000	     6347	  0.390
+DisplayForecastAntigensByDisease   	 98.658	  1.342	  0.000	  0.000	  0.000	      596	  0.305
+phdp-web                           	100.000	  0.000	  0.000	  0.000	  0.000	        7	  0.284
+RecentWorkServlet                  	 98.449	  1.551	  0.000	  0.000	  0.000	     1805	  0.273
+delims                             	100.000	  0.000	  0.000	  0.000	  0.000	       55	  0.255
+NA                                 	 96.696	  2.384	  0.627	  0.209	  0.084	     2391	  0.235
+UIContextHeaderServlet             	 99.628	  0.358	  0.013	  0.000	  0.001	    70713	  0.218
+PopulateLotsAndHPLs                	 99.544	  0.443	  0.013	  0.000	  0.000	     7677	  0.202
+ReportsServlet                     	100.000	  0.000	  0.000	  0.000	  0.000	        2	  0.183
+GetProductLotInfo                  	 98.691	  1.190	  0.119	  0.000	  0.000	     1680	  0.177
+Portal                             	 99.379	  0.543	  0.078	  0.000	  0.000	     2576	  0.177
+role_changer                       	 98.630	  1.370	  0.000	  0.000	  0.000	      146	  0.127
+GetRelatedClientList               	 98.961	  1.021	  0.018	  0.000	  0.000	     5486	  0.118
+htm                                	 97.647	  2.353	  0.000	  0.000	  0.000	       85	  0.109
+downloadTokenGet                   	100.000	  0.000	  0.000	  0.000	  0.000	        8	  0.104
+js                                 	 99.211	  0.789	  0.000	  0.000	  0.000	    23451	  0.102
+gif                                	 99.271	  0.729	  0.000	  0.000	  0.000	    30453	  0.095
+jpg                                	 99.556	  0.444	  0.000	  0.000	  0.000	    11475	  0.090
+RES_NOT_FOUND                      	100.000	  0.000	  0.000	  0.000	  0.000	        2	  0.087
+hierarchySubType                   	100.000	  0.000	  0.000	  0.000	  0.000	        1	  0.087
+aspx                               	 99.859	  0.141	  0.000	  0.000	  0.000	     1414	  0.064
+abc                                	 99.618	  0.316	  0.032	  0.019	  0.016	    31636	  0.056
+jsp                                	100.000	  0.000	  0.000	  0.000	  0.000	      926	  0.044
+css                                	 99.985	  0.015	  0.000	  0.000	  0.000	    13551	  0.044
+png                                	100.000	  0.000	  0.000	  0.000	  0.000	     1518	  0.042
+ico                                	100.000	  0.000	  0.000	  0.000	  0.000	      272	  0.023
+html                               	 99.831	  0.169	  0.000	  0.000	  0.000	      592	  0.015
+cgi                                	100.000	  0.000	  0.000	  0.000	  0.000	       50	  0.001
+
+
+=====================================================
+===== Browser Usage Statistics =====
+cnt - total number of unique user using this browser
+pc   - percentage usage of this browser
+IE compatibility mode and Trident Token Description for Internet Explorer
+Refer to: https://msdn.microsoft.com/en-us/library/ms537503(v=vs.85).aspx
+Refer to: https://msdn.microsoft.com/en-us/library/hh869301(v=vs.85).aspx
+Trident/7.0	--> IE11
+Trident/6.0	--> Internet Explorer 10
+Trident/5.0	--> Internet Explorer 9
+Trident/4.0	--> Internet Explorer 8
+=====================================================
+
+Browser                                      	      cnt	     pc
+Firefox/56.0                                 	      251	 33.919
+Firefox/48.0                                 	       89	 12.027
+Firefox/40.0                                 	       56	  7.568
+Firefox/42.0                                 	       55	  7.432
+Firefox/45.0                                 	       55	  7.432
+Firefox/38.0                                 	       37	  5.000
+Firefox/52.0                                 	       23	  3.108
+Firefox/53.0                                 	       23	  3.108
+Firefox/55.0                                 	       23	  3.108
+Firefox/50.0                                 	       15	  2.027
+Chrome/61.0.3163.100/Safari/537.36           	       13	  1.757
+MSIE/11.0;Trident/7.0                        	       13	  1.757
+Firefox/51.0                                 	       12	  1.622
+Firefox/54.0                                 	       10	  1.351
+Firefox/44.0                                 	        9	  1.216
+Firefox/47.0                                 	        9	  1.216
+Firefox/43.0                                 	        6	  0.811
+MSIE/7.0;compatible;Trident/6.0              	        6	  0.811
+Chrome/59.0.3071.104/Safari/537.36           	        4	  0.541
+Firefox/49.0                                 	        4	  0.541
+Chrome/62.0.3202.75/Safari/537.36            	        3	  0.405
+Mobile/14D27/Safari/602.1                    	        3	  0.405
+MSIE/9.0;compatible;Trident/7.0              	        3	  0.405
+Firefox/35.0                                 	        2	  0.270
+Mobile/14A456/Safari/602.1                   	        2	  0.270
+Mobile/14F89/Safari/602.1                    	        2	  0.270
+MSIE/10.0;compatible;Trident/6.0             	        2	  0.270
+Edge/13.10586                                	        1	  0.135
+Firefox/46.0                                 	        1	  0.135
+Mobile/14A403/Safari/602.1                   	        1	  0.135
+Mobile/14B100/Safari/602.1                   	        1	  0.135
+Mobile/14G60/Safari/602.1                    	        1	  0.135
+Mobile/15A372/Safari/604.1                   	        1	  0.135
+Mobile/15A402/Safari/604.1                   	        1	  0.135
+Mobile/15A432/Safari/604.1.38                	        1	  0.135
+MSIE/7.0;compatible;Trident/7.0              	        1	  0.135
+MSIE/9.0;compatible;Trident/5.0              	        1	  0.135
+
+
+=====================================================
+===== OS Usage Statistics =====
+cnt - total number of unique user using this OS
+pc   - percentage usage of this OS
+For list of microsoft version refer to:
+https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions
+=====================================================
+
+OS                                           	      cnt	     pc
+Windows/NT/6.1                               	      588	 80.992
+Windows/NT/10.0                              	      120	 16.529
+Windows/NT/6.3                               	        4	  0.551
+iPad/like Mac OS X/10_2_1                    	        3	  0.413
+iPad/like Mac OS X/10_0_2                    	        2	  0.275
+iPad/like Mac OS X/10_3_2                    	        2	  0.275
+iPad/like Mac OS X/10_0_1                    	        1	  0.138
+iPad/like Mac OS X/10_1_1                    	        1	  0.138
+iPad/like Mac OS X/10_3_3                    	        1	  0.138
+iPad/like Mac OS X/11_0_1                    	        1	  0.138
+iPad/like Mac OS X/11_0_3                    	        1	  0.138
+iPad/like Mac OS X/11_0                      	        1	  0.138
+Windows/NT/5.1                               	        1	  0.138
