@@ -171,8 +171,8 @@ salesMgmt               1.351	   82908
 ===== for detail review file: /tmp/2017-11-03/WebAccessLogSummaryByUIDRpt.csv =====
 =====================================================
 
-uid                                           <=1	     <=5	    <=10	   <=20	    >20	      xrc	    art
-abc.Gilwarden@logparserorg.com              	86.538	 10.577	  0.962	  0.000	  1.923	      104	 26.099
+uid                                           <=1      <=5      <=10    <=20    >20         xrc   art
+abc.Gilwarden@logparserorg.com                86.538	 10.577	  0.962	  0.000	  1.923	      104	 26.099
 def.Freaking@logparserorg.com                 66.667	 25.000	  0.000	  0.000	  8.333	       12	 19.718
 xyz.Diming@logparserorg.com                   60.870	  6.522	  0.000	  0.000	 32.609	       46	 11.153
 def.Twang@logparserorg.com                    90.807	  4.709	  2.466	  0.000	  2.018	      446	  8.617
