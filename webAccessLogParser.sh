@@ -54,9 +54,8 @@ rptDomainUsgByDay="$rptDir/WebDlyDomainUsage.csv";
 
 #--------- History Report/Output files -------#
 # These are historical reports. Each run will append record in existing report file.
-# If historical file does not exist, create and add heading.
-
 rptPerfHistFile="$pDir/WebPerfHistoryRpt.csv";
+
 if [[ ! -e $rptPerfHistFile && $rptType == "daily" ]]; then
 	echo "===== Summary table contains short heading title. See below for their description =====" > $rptPerfHistFile;
 	echo "date 	: Date" >> $rptPerfHistFile;
@@ -292,8 +291,8 @@ awk -vrecDate=$recDate -vrptDir=$rptDir -vpDir=$pDir -vrptType=$rptType -vfWasCl
 		#	%{User-agent}i: the content of User-agent: header line in the request sent to the server.
 		#	%v: the (canonical) server name of the server serving the request
 		#Typical access_log record looks like the following:
-		#xx.xxx.xxx.xx - - [13/Jun/2015:10:32:04 -0400] "GET /DashBoard/global/images/application-logoen.png HTTP/1.1" 200 66497 JSESSIONID="00006zV1pGhZFY7Gg2P1nzrkjyd:19670enb4" UID="abc.def@xyz.com" 162452 1545 67052 "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" srvwebxxxxx0x0
-		#xx.xxx.xxx.xx - abc.def@xyz.com [13/Jun/2015:10:32:04 -0400] "GET /DashBoard/global/js/devGlobal.js HTTP/1.1" 200 3212 JSESSIONID="00006zV1pGhZFY7Gg2P1nzrkjyd:19670enb4" UID="abc.def@xyz.com" 225677 1534 3649 "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" srvwebxxxxx0x0
+		#xx.xxx.xxx.xx - - [13/Jun/2015:10:32:04 -0400] "GET /dashBoardScreen/global/images/application-logoen.png HTTP/1.1" 200 66497 JSESSIONID="00006zV1pGhZFY7Gg2P1nzrkjyd:19670enb4" UID="abc.def@xyz.com" 162452 1545 67052 "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" srvwebxxxxx0x0
+		#xx.xxx.xxx.xx - abc.def@xyz.com [13/Jun/2015:10:32:04 -0400] "GET /dashBoardScreen/global/js/devGlobal.js HTTP/1.1" 200 3212 JSESSIONID="00006zV1pGhZFY7Gg2P1nzrkjyd:19670enb4" UID="abc.def@xyz.com" 225677 1534 3649 "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" srvwebxxxxx0x0
 		
 		#---Process 1st field
 		#xx.xxx.xxx.xx - abc.def@xyz.com [13/Jun/2015:10:32:03 -0400]

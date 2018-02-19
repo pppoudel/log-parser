@@ -50,6 +50,7 @@ rptGcFile="$rptDir/GCstatsRpt_all.csv"
 
 #--------- History Report/Output files -------#
 rptGcHstAllFile="$pDir/GCHistoryRpt_all.csv"
+
 if [[ ! -e $rptGcHstAllFile && $rptType == "daily" ]]; then
 	echo "===== Summary table contains short heading title. See below for their description =====" > $rptGcHstAllFile;
 	echo "" >> $rptGcHstAllFile;

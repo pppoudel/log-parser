@@ -65,8 +65,8 @@ rptWasWarnSumByMsgFile="$rptDir/WASLogSummaryByWarnMsgRpt.csv"
 
 #--------- History Report/Output files -------#
 # These are historical reports. Each run will append record in existing report file.
-# If historical file does not exist, create and add heading.
 rptRecycleHstFile="$pDir/RecycleHistoryRpt_all.csv";
+
 if [[ ! -e $rptRecycleHstFile && $rptType == "daily" ]]; then
 	echo "#srv: server" > $rptRecycleHstFile;
 	echo "date|srv" >> $rptRecycleHstFile;

@@ -33,6 +33,7 @@ echo "$cmdln" 2>&1 | tee -a $parserExeLog;
 
 #--------- Input files ---------------#
 fTh=./thresholdValues.csv
+
 #--------- Report/Output files -------#
 rptAlertFile="$rptDir/00_Alert.txt"
 rptSummaryFile="$rptDir/03_WebErrorLogSummaryRpt.txt";
@@ -41,9 +42,8 @@ rptErrFile="$rptDir/WebErrorLogRpt_all.csv"
 
 #--------- History Report/Output files -------#
 # These are historical reports. Each run will append record in existing report file.
-# If historical file does not exist, create and add heading.
-
 rptRecycleHstFile="$pDir/RecycleHistoryRpt_all.csv";
+
 if [[ ! -e $rptRecycleHstFile && $rptType == "daily" ]]; then
 	echo "#srv: server" > $rptRecycleHstFile;
 	echo "date|srv" >> $rptRecycleHstFile;
