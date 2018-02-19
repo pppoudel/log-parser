@@ -9,9 +9,9 @@ If interested, see my blog post Log Parsing, Analysis, correlation, and Reportin
 
 Project has four parsers namely:
  * [websphereLogParser.sh for parsing, analyzing and reporting WebSphere Application Server (WAS) SystemOut.log](websphereLogParser.sh)
- * [webAccessLogParser.sh for parsing, analyzing and reporting Apache/IBM HTTP Server (IHS) access_log](blob/master/webAccessLogParser.sh)
- * [webErrorLogParser.sh for parsing, analyzing and reporting Apache/IBM HTTP Server (IHS) error_log](../master/webErrorLogParser.sh)
- * [javaGCStatsParser.sh for parsing, analyzing and reporting Java verbose Garbage Collection (GC) log.](../master/javaGCStatsParser.sh)
+ * [webAccessLogParser.sh for parsing, analyzing and reporting Apache/IBM HTTP Server (IHS) access_log](webAccessLogParser.sh)
+ * [webErrorLogParser.sh for parsing, analyzing and reporting Apache/IBM HTTP Server (IHS) error_log](webErrorLogParser.sh)
+ * [javaGCStatsParser.sh for parsing, analyzing and reporting Java verbose Garbage Collection (GC) log.](javaGCStatsParser.sh)
 <br/>
 * Utility scripts:
  * masterLogParser.sh wrapper script for invoking above parsers all sequentially.
