@@ -1,0 +1,211 @@
+=====================================================
+===== WAS log analysis report =====
+===== based on SystemOut logs dated: 2017-02-03  =====
+=====================================================
+
+===== Summary table contains short heading title. See below for their description =====
+hr   	: Hour                                                                
+date 	: Date                                                                
+time 	: Time                                                                
+tz   	: Time Zone                                                           
+woct 	: Web or ORB Container Thread                                         
+awoct	: Affected Web or ORB Container Thread(s), may be because of CPU Starvation scheduling dealy
+thid 	: Thread ID                                                           
+uid  	: User ID                                                             
+js   	: jSession                                                            
+rt   	: Response Time in Second                                             
+dly  	: Delay in second, may be because of CPU Starvation or other causes.  
+tdly 	: Total Delay in second, may be because of CPU Starvation or other causes.
+ttov 	: Transaction TimeOut Value.                                          
+htm  	: Hung Thread Hung time in second                                     
+chtc 	: Current Hung Thread Count                                           
+nhtc 	: Number of NEW Hung Thread Count                                     
+mhtc 	: Maximum number of Hung Thread Count                                 
+rhtc 	: Remaining number of Hung Thread Count                               
+cnt  	: (Any) Count like jSession count, User count etc.                    
+trn  	: Transaction                                                         
+tid  	: Transaction ID                                                      
+sts  	: Status - Transaction or any status in context                       
+pc   	: (Any) Count or measure represented in Percentage                    
+jvm  	: Java Virtual Machine, may be interchangeably used with was or srv in reports.
+was  	: WebSphere Application Server                                        
+srv  	: server - like web server(IHS), App Server etc.                      
+cmp  	: Component                                                           
+fnc  	: function                                                            
+exp  	: Exception                                                           
+evt  	: Event Type like WARNING, ERROR, FATAL etc.                          
+msg  	: Message                                                             
+lmdl 	: Log module                                                          
+=====================================================
+
+=====================================================
+===== Hung Thread Details =====
+=====================================================
+
+was            	date      	time        	tz 	hr	woct	thid      	      htm	 chtc	sts     
+AppSrv01       	2/3/17    	6:48:56:526 	EST	6 	10 	000013cb  	  752.276	    1	Hung    
+AppSrv01       	2/3/17    	6:52:44:156 	EST	6 	10 	000013cb  	  979.913	    0	Released
+AppSrv01       	2/3/17    	6:57:56:575 	EST	6 	26 	00011cd7  	  610.239	    1	Hung    
+AppSrv01       	2/3/17    	6:59:26:561 	EST	6 	26 	00011cd7  	  700.232	    0	Released
+AppSrv01       	2/3/17    	7:12:56:589 	EST	7 	13 	0000183c  	  769.964	    1	Hung    
+AppSrv01       	2/3/17    	7:12:56:785 	EST	7 	13 	0000183c  	  770.166	    0	Released
+
+=====================================================
+===== Hung Thread Summary By Server =====
+=====================================================
+
+was            	nhtc	mhtc	rhtc
+AppSrv01       	   3	   1	   0
+=====================================================
+Total New Hung Threads in the system: 3
+Total Max Hung Threads in the system: 1
+Total Hung Threads still remaining in the system: 0
+
+=====================================================
+===== Transaction Timeout =====
+=====================================================
+
+was            	date      	time        	tz 	thid    	awoct          	ttov 	tid                                               
+AppSrv03       	2/3/17    	9:07:58:870 	EST	00000056	8,5,main       	120  	0000015A044BC4BD000000011C95A54CDE92D76CF940F7C1E857105C3C8C4351FD16CFAA0000015A044BC4BD000000011C95A54CDE92D76CF940F7C1E857105C3C8C4351FD16CFAA00000001
+AppSrv03       	2/3/17    	11:36:13:491	EST	0000004f	17,5,main      	120  	0000015A04D37D5F000000011C9BA320DE92D76CF940F7C1E857105C3C8C4351FD16CFAA0000015A04D37D5F000000011C9BA320DE92D76CF940F7C1E857105C3C8C4351FD16CFAA00000001
+
+Transaction timeout by JVM:
+AppSrv03:2
+
+total Transaction timeout on all JVMs:2
+
+=====================================================
+===== CPU Starvation Warnings =====
+=====================================================
+
+was            	date      	time        	tz 	  dly
+AppSrv02       	2/3/17    	10:09:08:674	EST	7.000
+AppSrv03       	2/3/17    	11:34:47:841	EST	5.000
+AppSrv03       	2/3/17    	14:27:25:650	EST	7.000
+AppSrv04       	2/3/17    	10:55:32:986	EST	5.000
+
+Summary of Scheduling delays:
+
+was            	cnt	tdly 
+AppSrv03       	2  	12.000
+AppSrv02       	1  	7.000
+AppSrv04       	1  	5.000
+
+=====================================================
+===== Summary of Error and Warning count by Server =====
+=====================================================
+
+was            	evt	   cnt
+AppSrv01       	E  	  1757
+AppSrv01       	O  	    19
+AppSrv01       	W  	 10990
+AppSrv02       	E  	  1228
+AppSrv02       	O  	    38
+AppSrv02       	W  	 11209
+AppSrv03       	E  	  1082
+AppSrv03       	O  	    20
+AppSrv03       	W  	  9604
+AppSrv04       	E  	  1417
+AppSrv04       	O  	    24
+AppSrv04       	W  	 11387
+Total for all servers:48775
+
+=====================================================
+===== Summary of (Top 10 by total count) ERROR and FATAL events by component =====
+===== Review file: /tmp/2017-02-03/WASLogSummaryByErrCmpRpt.csv for all Errors and Fatal events =====
+=====================================================
+
+cmp                      	evt	   cnt
+LookupDispatc            	E  	  5320
+servlet                  	E  	    50
+LocalTranCoor            	E  	    31
+webapp                   	E  	    31
+AbstractFlush            	E  	    20
+component                	E  	    17
+viewhandler              	E  	     7
+lifecycle                	E  	     6
+InsertTag                	E  	     1
+meta                     	E  	     1
+
+=====================================================
+===== Summary of (Top 10 by total count) WARN events by component =====
+===== Review file: /tmp/2017-02-03/WASLogSummaryByWarnCmpRpt.csv for all Errors and Fatal events =====
+=====================================================
+
+cmp                      	evt	   cnt
+LocalTranCoor            	W  	 38683
+ActionMapping            	W  	  4454
+srt                      	W  	    30
+RequestProces            	W  	    10
+ThreadMonitor            	W  	     6
+CoordinatorCo            	W  	     4
+AnnotationBin            	W  	     1
+lifecycle                	W  	     1
+SettingsFacto            	W  	     1
+
+=====================================================
+===== Summary of Top 10 by total count) Error and Fatal events by Error class =====
+===== Review file: /tmp/2017-02-03/WASLogSummaryByErrClassRpt.csv for all Error and Fatal events by Error class =====
+=====================================================
+
+evt	   cnt	cmp                                               
+E  	  5320	org.apache.struts.actions.LookupDispatchAction    
+E  	    50	com.ibm.ws.webcontainer.servlet.ServletWrapper    
+E  	    31	com.ibm.ws.webcontainer.webapp.WebApp             
+E  	    31	WLTC0017E:                                        
+E  	    20	org.hibernate.event.def.AbstractFlushingEventListener
+E  	    17	/pages/cust/deepmerge/deepMergeAttributes.xhtml         
+E  	     7	Error                                             
+E  	     6	JSF1054:                                          
+E  	     1	/common/sections/docMgmt.xhtml         
+E  	     1	org.apache.struts.tiles.taglib.InsertTag$InsertHandler
+
+=====================================================
+===== Summary of Top 10 (by total count) WARN events by WARN class =====
+===== Review file: /tmp/2017-02-03/WASLogSummaryByWarnClassRpt.csv for all WARN events by WARN class =====
+=====================================================
+
+evt	   cnt	cmp                                               
+W  	 19675	WLTC0033W:                                        
+W  	 19008	WLTC0032W:                                        
+W  	  4454	org.apache.struts.action.ActionMapping            
+W  	    30	com.ibm.ws.webcontainer.srt.SRTServletResponse    
+W  	    10	org.apache.struts.action.RequestProcessor         
+W  	     4	HMGR0152W:                                        
+W  	     3	WSVR0605W:                                        
+W  	     3	WSVR0606W:                                        
+W  	     1	org.hibernate.cfg.AnnotationBinder                
+
+=====================================================
+===== Summary of Top 10 (by total count) ERROR and FATAL events by Message =====
+===== Review file: /tmp/2017-02-03/WASLogSummaryByErrMsgRpt.csv for all ERROR and FATAL events by Message =====
+=====================================================
+
+   cnt	evt	msg                      
+  1528	E  	Action[/assessSales] missing resource in key method map 'EventWorksheetAssessSales'
+   989	E  	Action[/SalesSummary] missing resource in key method map 'custsalesProfile'
+   824	E  	Action[/SalesEvent/SalesEventWorksheetAction] missing resource in key method map 'AssesssalesCancel'
+   569	E  	Action[/Sales_view_add] missing resource in key method map 'SalesinationSelectedDetailActionCancel'
+   491	E  	Action[/SalesEvent/SalesEventWorksheetAction] missing resource in key method map 'MasssalesEventWK'
+   239	E  	Action[/SalesEvent/SalesEventWorksheetAction] missing resource in key method map 'SummaryCancel'
+   235	E  	Action[/Sales_view_add] missing resource in key method map 'SummaryCancel'
+   106	E  	Action[/SalesSummary] missing resource in key method map 'SalesinationSelectedDetailActionCancel'
+    73	E  	Action[/SalesEvent/SalesEvent] missing resource in key method map 'EventWorksheetCancel'
+    65	E  	Action[/CallableRecallSearch] missing resource in key method map 'CallableCancelAction'
+
+=====================================================
+===== Summary of Top 10 (by total count) WARN events by Message =====
+===== Review file: /tmp/2017-02-03/WASLogSummaryByWarnMsgRpt.csv for all WARN events by Message =====
+=====================================================
+
+   cnt	evt	msg                      
+ 19008	W  	or W   WLTC0032W: One or more local transaction resources were rolled back during the cleanup of a LocalTransactionContainment.
+ 18016	W  	jdbc/salesDS rolled back in cleanup of LocalTransactionContainment.
+  4270	W  	Unable to find 'success' forward.
+  1639	W  	jdbc/sharedDS rolled back in cleanup of LocalTransactionContainment.
+   182	W  	Unable to find 'Sales_view_add' forward.
+    20	W  	jdbc/salesDS rolled back in cleanup of LocalTransactionContainment.
+    15	W  	SRVE8094W: WARNING: Cannot set header. Response already committed.
+    15	W  	WARNING: Cannot set status. Response already committed.
+     6	W  	Unhandled Exception thrown: class com.stchome.exception.app.salesFatalException
+     2	W  	Starvation detected. Current thread scheduling delay is 5 seconds.
