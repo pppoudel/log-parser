@@ -1,0 +1,70 @@
+=====================================================
+===== Http Error log analysis report =====
+===== based on error logs dated: 2017-11-03  =====
+=====================================================
+
+===== Summary table contains short heading title. See below for their description =====
+hr   	: Hour                                                                
+date 	: Date                                                                
+time 	: Time                                                                
+rdy  	: Ready thread(s)                                                     
+bsy  	: Busy threads(s)                                                     
+rd   	: Read - number of threads currently reading request from user        
+wr   	: Write - number of threads currently writing or communicating to App Server or back-end
+ka   	: Keep Alive - number of threads holding keep alive session           
+log  	: Log - number of threads busy in logging                             
+dns  	: DNS - number of threads busy in DNS related activities              
+cls  	: CLS - number of threads busy in house cleaning related activities   
+mwas 	: Number of threads busy with mod_was_ap22_http.c                     
+mwgt 	: Number of threads busy with apache2entry_web_gate.cpp               
+was  	: WebSphere Application Server or App Server                          
+ws   	: Web Server like Apache or IBM HTTP Server (IHS)                     
+req  	: HTTP Request like GET, POST etc.                                    
+rsp  	: HTTP Response code like 200, 400 etc.                               
+err  	: Error message                                                       
+dtl  	: Detail - detail message                                             
+ref  	: Http referrer                                                       
+cnt  	: (Any) Count like jSession count, User count etc.                    
+url  	: URL                                                                 
+=====================================================
+
+=====================================================
+===== Http Error Count by Web Server =====
+=====================================================
+
+ws            cnt
+webhost010 	  821
+webhost020 	  758
+webhost030 	  732
+webhost040 	  454
+Total http error count: 2765
+
+=====================================================
+===== Http Error Count by Http Error Detail =====
+=====================================================
+
+cnt  	err                                               	dtl                                                         
+ 2211	(130)Software caused connection abort             	ap_pass_brigade() failed                                    
+  163	File does not exist                               	/apps/IBM/HTTPServer/htdocs/salesMgmt/global/css/null    
+  106	Attempt to serve directory                        	/apps/IBM/HTTPServer/htdocs/                                
+   80	File does not exist                               	/apps/IBM/HTTPServer/htdocs/custIdx/global/css/null
+   64	File does not exist                               	/apps/IBM/HTTPServer/htdocs/images                          
+   41	File does not exist                               	/apps/IBM/HTTPServer/htdocs/global                          
+   14	File does not exist                               	/apps/IBM/HTTPServer/htdocs/mrktngMgmt/global/css/null       
+   13	File does not exist                               	/apps/IBM/HTTPServer/htdocs/salesMgmt/tablesort.js       
+....
+
+=====================================================
+===== Http Error Count by Http Referrer =====
+=====================================================
+
+cnt  	ref                                                                                                                                              	dtl                                                                                                                                                   
+  630	https://www.prod.logparserorg.com:8005/salesMgmt/issue_view_add.do                                                                   	(130)Software caused connection abort : ap_pass_brigade() failed                                                                                      
+  397	https://www.prod.logparserorg.com:8005/salesMgmt/issueSummary.do                                                                     	(130)Software caused connection abort : ap_pass_brigade() failed                                                                                      
+  263	https://www.prod.logparserorg.com:8005/custIdx/pages/cust/custSearch.faces                                                	(130)Software caused connection abort : ap_pass_brigade() failed                                                                                      
+  164	https://www.prod.logparserorg.com:8005/custIdx/pages/cust/maintainRelationships.faces                                       	(130)Software caused connection abort : ap_pass_brigade() failed                                                                                      
+  162	https://www.prod.logparserorg.com:8005/salesMgmt/global/css/print.css                                                               	File does not exist : /apps/IBM/HTTPServer/htdocs/salesMgmt/global/css/null                                                                        
+  147	https://www.prod.logparserorg.com:8005/salesMgmt/salesMgmtEvent/salesMgmtEventWorksheetAction.do.xwar                         	(130)Software caused connection abort : ap_pass_brigade() failed                                                                                      
+  106	https://www.prod.logparserorg.com:8005/salesMgmt/issueSelectedDetail.do                                                              	(130)Software caused connection abort : ap_pass_brigade() failed                                                                                      
+                                                                        	The login form /EasSso/redirect.jsp defined for form authentication itself requires form authentication. It should be unprotected. :                  
+....
