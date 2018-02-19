@@ -1,0 +1,6 @@
+# Enter one keyword per line. Edit this file in Unix compatible editor
+Unable.*to.*sendVia.*
+Error.*Getting.*Directory
+503.*Service.*Temporarily.*Unavailable
+CORBA.*NO_RESPONSE
+ORA-01013:

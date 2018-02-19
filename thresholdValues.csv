@@ -1,0 +1,50 @@
+#property|value|target|comment
+#---------- threshold to analyse http (access and error) logs ----------
+http400PlusRespCountTh|10|http|Alert if total number (in percentage) of Http 400 plus responses exceed this value. Currently set as 10.
+httpAvgRespTimeByTranTh|3.0|http|Threshold for Average response time by transaction in seconds.
+httpAvgRespTimeTh|2.5|http|Threshold for Average response time in sec, excluding static contents. It may be for daily, PHU or for domain.
+httpDly1SecRangeTh|82|http|Alert if 1 sec range in percentage falls below this threshold.
+httpDly20SecRangeTh|0.9|http|Alert if 20 sec range in percentage goes beyond this threshold.
+httpBLnDevPcTh|3.5|http|Alert if more than given percentage of transaction exceed baseline.
+httpTransAvgRespTimeDiffWithBaseLineTh|50|http|Alert if average response time of given transaction is higher by this number than baseline in percentage.
+httpDiscRcdCountTh|2500|http|Alert if total number of discarded record while processing access log exceeds this value.
+httpErrorCountTh|3500|http.err|Alert if total error count per web server exceeds this value. Error count from error_log. Set as 3500.
+httpMpmStBsyCountTh|100|http.mpmstat|MPM Stats Busy count threshold. 
+httpMpmStRdCountTh|75|http.mpmstat|MPM Stats Read count threshold.
+httpMpmStWrCountTh|20|http.mpmstat|MPM Stats Write count threshold.
+httpMpmStPlgCountTh|20|http.mpmstat|MPM Stats Plugin count threshold.
+#---------- threshold to analyse verbose GC logs ----------
+gcDlyCountTh|800|jvm.App| jvm daily gc count threshold
+fgcDlyCountTh|10|jvm.App| jvm daily full gc count threshold
+gcDlyCountTh|100|jvm.Bat| jvm daily gc count threshold
+fgcDlyCountTh|6|jvm.App| jvm daily full gc count threshold
+gcDlyCountTh|100|jvm.Bat|BatchSrv jvm daily gc count threshold
+fgcOldGenAfTh|4700000|jvm.App| jvm Old Generation used After threshold
+fgcPGenAfTh|2097152|jvm.App| jvm Permananent Generation used After threshold
+fgcOldGenAfTh|4700000|jvm.App| jvm Old Generation used After threshold
+fgcPGenAfTh|2097152|jvm.App| jvm Permananent Generation used After threshold
+#---------- threshold to analyse WAS SystemOut logs ----------
+wasTranTmOutCntTh|3|was.App|- threshold for trasaction timeout count for app server. Set as 3.
+wasTranTmOutCntTh|2|was.Bat|- threshold for trasaction timeout count for batch server. Set as 2.
+wasTranTmOutCntTh|2|was.App|- threshold for trasaction timeout count for app server. Set as 2.
+wasTranTmOutCntTh|2|was.Bat|- threshold for trasaction timeout count for batch server. Set as 2.
+wasCPUStarvCntTh|3|was.App|- threshold for trasaction timeout count for app server. Set as 3.
+wasCPUStarvCntTh|2|was.Bat|- threshold for trasaction timeout count for batch server. Set as 2.
+wasCPUStarvCntTh|2|was.App|- threshold for trasaction timeout count for app server. Set as 2.
+wasCPUStarvCntTh|3|was.Bat|- threshold for trasaction timeout count for batch server. Set as 3.
+wasHungThrdCntTh|3|was.App|- threshold for trasaction timeout count for app server. Set as 3.
+wasHungThrdCntTh|2|was.Bat|- threshold for trasaction timeout count for batch server. Set as 2.
+wasHungThrdCntTh|2|was.App|- threshold for trasaction timeout count for app server. Set as 2.
+wasHungThrdCntTh|2|was.Bat|- threshold for trasaction timeout count for batch server. Set as 2.
+wasFCntTh|5|was.App|- threshold for FATAL count for each App server. Set as 5.
+wasECntTh|6500|was.App|- threshold for FATAL and ERROR count for each App server. Set as 6500.
+wasWCntTh|18500|was.App|- threshold for WARN count for each App server. Set as 18500.
+wasFCntTh|5|was.Bat|- threshold for FATAL count for each Batch server. Set as 5.
+wasECntTh|50|was.Bat|- threshold for ERRORcount for each Batch server. Set as 50.
+wasWCntTh|50|was.Bat|- threshold for WARN count for each Batch server. Set as 50.
+wasFCntTh|5|was.App|- threshold for FATAL count for each App server. Set as 5.
+wasECntTh|4500|was.App|- threshold for ERROR count for each App server. Set as 4500.
+wasWCntTh|9000|was.App|- threshold for WARN count for each App server. Set as 9000.
+wasFCntTh|100|was.Bat|- threshold for FATAL count for each Batch server. Set as 5.
+wasECntTh|25|was.Bat|- threshold for ERROR count for each Batch server. Set as 25.
+wasWCntTh|70|was.Bat|- threshold for WARN count for each Batch server. Set as 70.
