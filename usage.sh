@@ -56,7 +56,7 @@ currSDate=$(date -d $currDate +%s);
 parserExeLog=$TMP/parser.log
 appendParserLog="true" #if 'false' then creates new parser.log every time.
 
-OPTS=$(getopt -o c:t:d:l:n:o: -l rootcontext:,rpttype:,recorddate:,rptloc:,envname:,procoption: -- "$0" "$@");
+OPTS=$(getopt -o c:t:d:l:o: -l rootcontext:,rpttype:,recorddate:,rptloc:,procoption: -- "$0" "$@");
 if [ $? != 0 ]; then
 	echo "Unrecognised command line option encountered.";
 	usage;
