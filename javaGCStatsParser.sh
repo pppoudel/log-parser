@@ -109,14 +109,12 @@ do
 	echo "Started parsing file: " $_file 2>&1 | tee -a $parserExeLog
 	#pName=`dirname $_file | awk -F"/" '{print $NF}'`
 	if [[ $PO == "partial" ]]; then
-		#get the line number-9 of matching string.
-		#lnToRd=`awk -vrecDate=$recDate '$0 ~ recDate {print NR;exit}' $_file`
 		lnToRd=`grep -on -m 1 "$recDate" $_file | cut -d':' -f1`
 		if [[ $lnToRd == "" ]]; then
 			continue;
 		else
-			#echo "line number:"$lnToRd
-			#awk -vlnToRd=$lnToRd 'NR >= lnToRd {print $0}' $_file
+			# get the line number-9 of matching string. '-9' is because; there are 9 lines after the line with timestamp.
+      # So, it is done this way, in order to extract the proper record within given date range.
 			lnToRd=$(($lnToRd-9))
 			tail -n +$lnToRd $_file
 		fi
