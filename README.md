@@ -3,7 +3,7 @@
 There are multiple tools/technologies available in the market that deal (searching, analyzing, monitoring etc.) with machine generated data/logs, but sometimes, you just need some light-weight
 custom solution to deal with your specific situation and power of Shell scripting helps. I happened to be in such situation when I had to help a project team to identify performance issues, performance deviation, analyse and identify Java memory and Garbage Collection issues, troubleshoot production problem and identify root cause etc. and I ended up writing this solution. I'm sharing this with people, so that they can take it and customize and use as per their need.
 <br/>
-If interested, see my blog post Log Parsing, Analysis, correlation, and Reporting Engine for more details.
+If interested, see my blog post - [Log Parsing, Analysis, correlation, and Reporting Engine](https://purnapoudel.blogspot.ca/2018/02/log-parsing-analysing-correlation-reporting-engine.html) for more details.
 
 <br/>
 
